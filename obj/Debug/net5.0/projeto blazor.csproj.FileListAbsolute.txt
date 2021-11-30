@@ -1,0 +1,60 @@
+C:\projeto blazor\bin\Debug\net5.0\appsettings.Development.json
+C:\projeto blazor\bin\Debug\net5.0\appsettings.json
+C:\projeto blazor\bin\Debug\net5.0\projeto blazor.StaticWebAssets.xml
+C:\projeto blazor\bin\Debug\net5.0\projeto blazor.exe
+C:\projeto blazor\bin\Debug\net5.0\projeto blazor.deps.json
+C:\projeto blazor\bin\Debug\net5.0\projeto blazor.runtimeconfig.json
+C:\projeto blazor\bin\Debug\net5.0\projeto blazor.runtimeconfig.dev.json
+C:\projeto blazor\bin\Debug\net5.0\projeto blazor.dll
+C:\projeto blazor\bin\Debug\net5.0\ref\projeto blazor.dll
+C:\projeto blazor\bin\Debug\net5.0\projeto blazor.pdb
+C:\projeto blazor\bin\Debug\net5.0\projeto blazor.Views.dll
+C:\projeto blazor\bin\Debug\net5.0\projeto blazor.Views.pdb
+C:\projeto blazor\obj\Debug\net5.0\projeto blazor.csprojAssemblyReference.cache
+C:\projeto blazor\obj\Debug\net5.0\projeto blazor.GeneratedMSBuildEditorConfig.editorconfig
+C:\projeto blazor\obj\Debug\net5.0\projeto blazor.AssemblyInfoInputs.cache
+C:\projeto blazor\obj\Debug\net5.0\projeto blazor.AssemblyInfo.cs
+C:\projeto blazor\obj\Debug\net5.0\projeto blazor.csproj.CoreCompileInputs.cache
+C:\projeto blazor\obj\Debug\net5.0\projeto blazor.MvcApplicationPartsAssemblyInfo.cache
+C:\projeto blazor\obj\Debug\net5.0\projeto blazor.RazorComponent.input.cache
+C:\projeto blazor\obj\Debug\net5.0\RazorDeclaration\App.razor.g.cs
+C:\projeto blazor\obj\Debug\net5.0\RazorDeclaration\Pages\Counter.razor.g.cs
+C:\projeto blazor\obj\Debug\net5.0\RazorDeclaration\Pages\FetchData.razor.g.cs
+C:\projeto blazor\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
+C:\projeto blazor\obj\Debug\net5.0\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
+C:\projeto blazor\obj\Debug\net5.0\RazorDeclaration\_Imports.razor.g.cs
+C:\projeto blazor\obj\Debug\net5.0\RazorDeclaration\Shared\MainLayout.razor.g.cs
+C:\projeto blazor\obj\Debug\net5.0\RazorDeclaration\Shared\NavMenu.razor.g.cs
+C:\projeto blazor\obj\Debug\net5.0\projeto blazor.RazorComponent.output.cache
+C:\projeto blazor\obj\Debug\net5.0\RazorDeclaration\projeto blazor.dll
+C:\projeto blazor\obj\Debug\net5.0\projeto blazor.TagHelpers.input.cache
+C:\projeto blazor\obj\Debug\net5.0\projeto blazor.TagHelpers.output.cache
+C:\projeto blazor\obj\Debug\net5.0\projeto blazor.RazorCoreGenerate.cache
+C:\projeto blazor\obj\Debug\net5.0\Razor\App.razor.g.cs
+C:\projeto blazor\obj\Debug\net5.0\Razor\Pages\Counter.razor.g.cs
+C:\projeto blazor\obj\Debug\net5.0\Razor\Pages\FetchData.razor.g.cs
+C:\projeto blazor\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
+C:\projeto blazor\obj\Debug\net5.0\Razor\Shared\SurveyPrompt.razor.g.cs
+C:\projeto blazor\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
+C:\projeto blazor\obj\Debug\net5.0\Razor\Shared\MainLayout.razor.g.cs
+C:\projeto blazor\obj\Debug\net5.0\Razor\Shared\NavMenu.razor.g.cs
+C:\projeto blazor\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
+C:\projeto blazor\obj\Debug\net5.0\Razor\Pages\_Host.cshtml.g.cs
+C:\projeto blazor\obj\Debug\net5.0\projeto blazor.RazorAssemblyInfo.cache
+C:\projeto blazor\obj\Debug\net5.0\projeto blazor.RazorAssemblyInfo.cs
+C:\projeto blazor\obj\Debug\net5.0\staticwebassets\projeto blazor.StaticWebAssets.Manifest.cache
+C:\projeto blazor\obj\Debug\net5.0\staticwebassets\projeto blazor.StaticWebAssets.xml
+C:\projeto blazor\obj\Debug\net5.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+C:\projeto blazor\obj\Debug\net5.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+C:\projeto blazor\obj\Debug\net5.0\scopedcss\bundle\projeto blazor.styles.css
+C:\projeto blazor\obj\Debug\net5.0\scopedcss\projectbundle\projeto blazor.bundle.scp.css
+C:\projeto blazor\obj\Debug\net5.0\projeto blazor.RazorTargetAssemblyInfo.cache
+C:\projeto blazor\obj\Debug\net5.0\projeto blazor.RazorTargetAssemblyInfo.cs
+C:\projeto blazor\obj\Debug\net5.0\projeto blazor.Views.pdb
+C:\projeto blazor\obj\Debug\net5.0\projeto blazor.dll
+C:\projeto blazor\obj\Debug\net5.0\ref\projeto blazor.dll
+C:\projeto blazor\obj\Debug\net5.0\projeto blazor.pdb
+C:\projeto blazor\obj\Debug\net5.0\projeto blazor.genruntimeconfig.cache
+C:\projeto blazor\obj\Debug\net5.0\projeto blazor.csproj.CopyComplete
+C:\projeto blazor\obj\Debug\net5.0\RazorDeclaration\Pages\CadastroUsuario.razor.g.cs
+C:\projeto blazor\obj\Debug\net5.0\RazorDeclaration\Shared\EmptyLayout.razor.g.cs

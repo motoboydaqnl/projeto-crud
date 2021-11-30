@@ -1,0 +1,174 @@
+@page "/CadastroUsuario"
+@inject IJSRuntime JS;
+
+<h1>Cadastro de Usuários no sistema</h1>
+
+<ul class="nav nav-tabs" id="TabPrincipal" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="tabLista" data-toggle="tab" href="#Lista" role="tab" aria-controls="home"
+            aria-selected="true">Listar Usuários</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="tabForm" data-toggle="tab" href="#Formulario" role="tab" aria-controls="profile"
+            aria-selected="false">Cadastrar/Alterar</a>
+    </li>
+</ul>
+<div class="tab-content" id="ContentTabLista">
+    <div class="tab-pane fade show active" id="Lista" role="tabpanel" aria-labelledby="home-tab">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>
+                    </th>
+                    <th>
+                        Cod Cliente
+                    </th>
+                    <th>
+                        Nome
+                    </th>
+                    <th>
+                        CPF
+                    </th>
+                    <th>
+                        Telefone
+                    </th>
+                    <th>
+                        E-mail
+                    </th>
+                    <th>
+                        Situação
+                    </th>
+                    <th>
+
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Usuario item in TodosUsuarios)
+                {
+                    <tr>
+                        <td>
+                            <button type="button" class="btn btn-primary" @onclick="() => AlterarUsuario(item)">
+                                <span class="oi oi-person" aria-hidden="true"></span>
+                            </button>
+                        </td>
+                        <td>@item.USUID</td>
+                        <td>@item.USUNOMECOMPLETO</td>
+                        <td>@item.USUCPF</td>
+                        <td>@item.USUTELEFONE</td>
+                        <td>@item.USUEMAIL</td>
+                        <td>@item.USUATIVO</td>
+                        <td>
+                            <button type="button" class="btn btn-danger" @onclick="() => ExcluirUsuario(item)">
+                                <span class="oi oi-trash" aria-hidden="true"></span>
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+    <div class="tab-pane fade" id="Formulario" role="tabpanel" aria-labelledby="profile-tab">
+            <div style="width: 800px;padding: 40px;">
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="txtNome" style="width:120px;">Nome:</label>
+                    <input type="text" id="txtNome" class="form-control" @bind="usuario.USUNOMECOMPLETO">
+                </div>
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="txtEmail" style="width:120px;">Email:</label>
+                    <input type="text" id="txtEmail" class="form-control" @bind="usuario.USUEMAIL">
+                </div>
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="txtCPF" style="width:120px;">CPF:</label>
+                    <input type="text" id="txtCPF" maxlength="14" class="form-control" @bind="usuario.USUCPF">
+                    <label class="input-group-text" for="txtTelefone" style="width:120px;">Telefone:</label>
+                    <input type="text" id="txtTelefone" class="form-control" @bind="usuario.USUTELEFONE">
+                </div>
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="Login" style="width:120px;">Login:</label>
+                    <input type="text" id="txtLogin" class="form-control" @bind="usuario.USULOGIN">
+                    <label class="input-group-text" for="txtSenha" style="width:120px;">Senha:</label>
+                    <input type="text" id="txtSenha" class="form-control" @bind="usuario.USUSENHA">
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="flexCheckDefault" @bind="usuario.USUATIVO">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Ativo?
+                    </label>
+                </div>
+                <div style="text-align: center;">
+                    <input type="button" value="Gravar" @onclick="GravarUsuario" class="btn btn-primary">
+                    <input type="button" value="Cancelar" @onclick="CancelarAcao" class="btn btn-warning">
+                </div>
+                <br>
+                <div class="alert alert-danger" style="display: @MostrarMensam;">
+                    <strong>Atenção!</strong> Campos Obrigatório: Nome, Email, Login E Senha.
+                </div>
+            </div>
+   </div>
+
+</div>
+
+@code
+{
+    public string MostrarMensam = "none";
+    public Usuario usuario = new Usuario();
+
+    public IList<Usuario> TodosUsuarios = new List<Usuario>();
+
+    protected override async Task OnInitializedAsync()//Quando Inicia a página
+    {
+        CarregarUsuarios();
+    }
+
+    public void CarregarUsuarios()
+    {
+        TodosUsuarios = new UsuarioDAO().BuscarUsuarios();
+    }
+    async Task ExcluirUsuario(Usuario usuario)
+    {
+        new UsuarioDAO().ExcluirUsuario(usuario);
+        //JS.InvokeAsync<string>("ShowTab", "tabForm");
+        CarregarUsuarios();
+    }
+
+    async Task AlterarUsuario(Usuario _usuario)
+    {
+        usuario = _usuario;
+        JS.InvokeAsync<string>("ShowTab", "tabForm");
+    }
+
+    public void GravarUsuario()
+    {
+        usuario.USUDATAHORACRIACAO = DateTime.Now;
+        if(string.IsNullOrEmpty(usuario.USULOGIN) || 
+           string.IsNullOrEmpty(usuario.USUEMAIL) ||
+           string.IsNullOrEmpty(usuario.USUNOMECOMPLETO)||
+           string.IsNullOrEmpty(usuario.USUSENHA))
+        {
+            MostrarMensam = "block";
+        }else
+        {
+            if(usuario.USUID>0)
+            {
+                //Isso é uma alteração
+                new UsuarioDAO().AtualizarUsuario(usuario);
+            }
+            else
+            {
+                new UsuarioDAO().InserirUsuario(usuario);
+            }
+
+            CarregarUsuarios();
+            usuario = new Usuario();
+            JS.InvokeAsync<string>("ShowTab", "tabLista");
+        }
+    }
+
+    public void CancelarAcao()
+    {
+        usuario = new Usuario();
+        JS.InvokeAsync<string>("ShowTab", "tabLista");
+    }
+}
