@@ -11,7 +11,7 @@ namespace ProjetoBlazor
 {
     public class UsuarioDAO
     {
-        string Conexao01 = @"Server=DESKTOP-3373R9V\SQLEXPRESS;Database=PROJETO BLAZOR;Trusted_Connection=True";
+        string Conexao01 = @"Server=DESKTOP-3373R9V\SQLEXPRESS;Database=ADRIANO;Trusted_Connection=True";
 
         public UsuarioDAO()
         {
